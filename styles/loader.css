@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: gunsan;
+  src: url(../fonts/gunsan.woff2);
+}
+   
+html,
+body{
+  font-family: "Sharp Grotesk";
+  background-color: rgb(47, 62, 62);
+  overflow-x: hidden;
+  color: white;
+}
+   
+.loader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(30, 43, 43);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+  z-index: 999999999;
+}
+   
+.loader-imgs{
+  width: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+#loader-logo img{
+  width: 100%;
+  object-fit: contain;
+}
+   
+.img{
+  position: relative;
+  flex: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+   
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+   
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin-top: 20vh;
+  /* top: 45%; */
+  /* transform: translateY(-50%); */
+  text-transform: uppercase;
+}
+
+.hero .h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  font-family: gunsan;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero h1 {
+  position: relative;
+  font-weight: 400;
+  line-height: 85%;
+}
+
+.hero h1 span {
+  font-family: "Sharp Grotesk";
+  font-weight: 700;
+}
+
+.bannerfooter {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  top: 50%;
+  right: 5%;
+  justify-content: flex-end;
+  gap: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.itemindex {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.space{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
