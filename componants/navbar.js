@@ -5,11 +5,10 @@ const navbar = ()=>{
           <div class="site-logo">ZCC</div>
           <div class="menu-toggle">
             <div id="menu-toggle-btn">
-              <span></span>
+              <span id="span"></span>
             </div>
           </div>
         </div>
-        
         <div id="nav-container">
           <div class="nav">
             <div class="col flex">
@@ -28,7 +27,7 @@ const navbar = ()=>{
                 <div class="nav-item-wrapper"></div>
               </div>
               <div class="nav-link">
-                <a href="#">About</a>
+                <a href="./about.html">About</a>
                 <div class="nav-item-wrapper"></div>
               </div>
               <div class="nav-link">
@@ -36,12 +35,11 @@ const navbar = ()=>{
                 <div class="nav-item-wrapper"></div>
               </div>
               <div class="nav-link">
-                <a href="#">Plans</a>
+                <a href="./plans.html">Plans</a>
                 <div class="nav-item-wrapper"></div>
               </div>
-              
               <div class="nav-link">
-                <a href="#">Contact</a>
+                <a href="./contact.html">Contact</a>
                 <div class="nav-item-wrapper"></div>
               </div>
             </div>

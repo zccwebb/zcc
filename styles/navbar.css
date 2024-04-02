@@ -26,6 +26,7 @@
    
    html,body{
      overflow-x: hidden;
+     cursor: none;
    }
    
    body::-webkit-scrollbar{
@@ -37,7 +38,7 @@
      display: flex;
      bottom: 20px;
      right: 20px;
-     z-index: 999;
+     z-index: 99;
    }
 
    #chatdiv>a>img{
@@ -51,7 +52,7 @@
      height: 100px;
      overflow: hidden;
      background: #ffffff00;
-     z-index: 999999 !important;
+     z-index: 999 !important;
    }
    
    .navbar {
@@ -73,6 +74,7 @@
      align-items: center;
      font-size: 30px;
      color: white;
+     cursor: pointer;
    }
 
    .nav-logo{
@@ -87,6 +89,10 @@
     width: 200px !important;
     object-fit: contain;
    }
+
+   .menu-toggle{
+    cursor: pointer;
+   }
    
    #menu-toggle-btn {
      margin-top: 5px;
@@ -94,50 +100,51 @@
      justify-content: center;
      align-items: center;
      height: 20px;
-     width: 20px;
+     width: 40px;
      position: relative;
-     cursor: pointer;
      transition: all 0.3s;
      z-index: 10000;
+     cursor: pointer;
    }
    
-   span {
+   #span {
      height: 2px;
      background: #ffffff;
-     width: 24px;
+     width: 44px;
      display: inline-block;
      position: absolute;
      top: 50%;
      transition: all 0.3s;
+     cursor: pointer;
    }
    
-   span::before {
+   #span::before {
      content: " ";
      position: absolute;
      display: inline-block;
      height: 2px;
      background: #ffffff;
      transform: translateY(-4px);
-     width: 24px;
+     width: 44px;
      transition: all 0.3s;
    }
    
-   span::before {
+   #span::before {
      top: -2px;
    }
    
-   .active span {
+   .active #span {
      transform: rotate(45deg);
      background: #ffffff;
    }
    
-   .active span::before {
+   .active #span::before {
      top: unset;
      transform: rotate(-90deg);
      background: #ffffff;
    }
    
-   .active:hover span::before {
+   .active:hover #span::before {
      top: unset;
    }
    
@@ -146,7 +153,7 @@
      top: 0;
      width: 100vw;
      height: 100vh;
-     background: #355351;
+     background: #22756f;
      color: #ffffff;
      transition: all 0.3s;
      display: flex;
@@ -154,6 +161,7 @@
      align-items: center;
      visibility: hidden;
      z-index: 999;
+     cursor: auto;
    }
    
    .nav {
@@ -230,7 +238,7 @@
      left: 0;
      width: 900px;
      height: 60px;
-     background: #355351;
+     background: #22756f;
      margin: 0 auto;
      transition: 1s;
    }

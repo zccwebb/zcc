@@ -68,10 +68,10 @@ export const previews = [
       "Website designed and Developed for a Plastic Injection Moulding Manufacturing Company.",
   },
   {
-    img: "./assets1/main-9.jpg",
+    img: "../images/img10.png",
     title: "All Works",
     tags: "Want to have a look on our Work ??",
     description:
-      "....",
+      "******",
   },
 ];

@@ -7,37 +7,55 @@
     <link rel="stylesheet" href="./styles/project.css" />
     <link rel="stylesheet" href="./styles/loader.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/cursor&magnbtn.css">
   </head>
   <body>
 
     <div class="container1"></div>
 
     <div class="navbar1"></div>
+
+    <div id="circle"></div>
     
     <div class="container">
       <div class="items">
-        <div class="item zcc"><p>ZCC</p></div>
-        <div class="item angels"><p>Angel's Makeover</p></div>
-        <div class="item astro"><p>Vedant Veena</p></div>
-        <div class="item cult"><p>Culfit</p></div>
-        <div class="item gems"><p>Gems.com</p></div>
-        <div class="item gym"><p>Gym.com</p></div>
-        <div class="item sapy"><p>SAPY</p></div>
-        <div class="item ssew"><p>SSEW</p></div>
-        <div class="item allworks"><p>All Works</p></div>
+        <div id="btndivproj" class="item zcc"><p>ZCC</p></div>
+        <div id="btndivproj" class="item angels"><p>Angel's Makeover</p></div>
+        <div id="btndivproj" class="item astro"><p>Vedant Veena</p></div>
+        <div id="btndivproj" class="item cult"><p>Culfit</p></div>
+        <div id="btndivproj" class="item gems"><p>Gems.com</p></div>
+        <div id="btndivproj" class="item gym"><p>Gym.com</p></div>
+        <div id="btndivproj" class="item sapy"><p>SAPY</p></div>
+        <div id="btndivproj" class="item ssew"><p>SSEW</p></div>
+        <div id="btndivproj" class="item allworks"><p>All Works</p></div>
       </div>
 
       <div class="preview-bg">
+        <div class="ourworkdivhead">
+          <h1 class="ourwork">A Few Glimpse of Our Works :-</h1>
+          <p class="ourworkinstructions">Hover / Click on buttons to checkout our projects.</p>
+        </div>
         <img src="./assets1/bg-1.jpg" alt="" />
       </div>
     </div>
     
     <div class="space"></div>
+
+    <div id="main">
+      <div class="frame" id="magbtn" onclick="magbtns()">
+           <span>Contact Us</span>
+      </div>
+ </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script type="module" src="./script/navbar.js"></script>
     <script type="module" src="./script/projectmain.js"></script>
     <script src="./gsap/script.js"></script>
     <script type="module" src="./script/loader.js"></script>
+    <script src="./gsap/cursor&magnbtn.js"></script>
     <script src="./gsap/navbargsap.js"></script>
   </body>
 </html>
+
+

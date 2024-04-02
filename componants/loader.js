@@ -4,25 +4,25 @@ const loaderdiv = ()=>{
           <div class="loader">
                <div class="loader-imgs">
                     <div class="img">
-                         <img src="./assets/img1.jpg" alt="" />
+                         <img src="./images/img1.png" alt="" />
                     </div>
                     <div class="img">
-                         <img src="./assets/img2.jpg" alt="" />
+                         <img src="./images/img2.png" alt="" />
                     </div>
                     <div class="img">
-                         <img src="./assets/img3.jpg" alt="" />
+                         <img src="./images/img6.png" alt="" />
                     </div>
                     <div class="img" id="loader-logo">
                          <img src="./images/zcclogo.png" alt="" />
                     </div>
                     <div class="img">
-                         <img src="./assets/img4.jpg" alt="" />
+                         <img src="./images/img10.png" alt="" />
                     </div>
                     <div class="img">
-                         <img src="./assets/img5.jpg" alt="" />
+                         <img src="./images/img8.png" alt="" />
                     </div>
                     <div class="img">
-                         <img src="./assets/img6.jpg" alt="" />
+                         <img src="./images/img7.png" alt="" />
                     </div>
                </div>
           </div>

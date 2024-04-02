@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: twk;
+  src: url(../fonts/TWKLausanne-200.woff2);
+}
+
 body {
   font-family: "Basis Grotesque Pro";
   background-color: #6d6d6dc5;
@@ -12,6 +17,19 @@ body {
 body::-webkit-scrollbar{
   display: none;
 }
+
+.ourworkdivhead{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  color: white;
+  font-family: twk;
+}
+
 
 img {
   width: 100%;
@@ -161,7 +179,6 @@ footer {
   line-height: 120%;
 }
 
-/* variant 1 styles */
 .preview.variant-1 .preview-img {
   position: absolute;
   bottom: 0%;
