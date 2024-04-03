@@ -25,7 +25,6 @@
    }
    
    html,body{
-     overflow-x: hidden;
      cursor: none;
    }
    
@@ -153,7 +152,7 @@
      top: 0;
      width: 100vw;
      height: 100vh;
-     background: #22756f;
+     background: #272727;
      color: #ffffff;
      transition: all 0.3s;
      display: flex;
@@ -238,7 +237,7 @@
      left: 0;
      width: 900px;
      height: 60px;
-     background: #22756f;
+     background: #272727;
      margin: 0 auto;
      transition: 1s;
    }

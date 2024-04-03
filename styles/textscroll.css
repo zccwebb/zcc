@@ -12,7 +12,8 @@
      font-size: 150px;
      text-transform: uppercase;
      overflow: hidden;
-     margin-bottom: 20vh;
+     margin-bottom: 10vh;
+     margin-top: 40vh;
    }
    
    .marquee__inner {

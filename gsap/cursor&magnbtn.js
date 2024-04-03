@@ -1,7 +1,6 @@
 var circle = document.querySelector("#circle");
 var frame = document.querySelector(".frame");
 var main = document.querySelector("#main");
-var span = document.querySelector(".hov")
 var text1 = document.querySelector(".hov1");
 var text2 = document.querySelector(".hov2");
 var text3 = document.querySelector(".hov3");
@@ -9,6 +8,22 @@ var text4 = document.querySelector(".hov4");
 
 
 const lerp = (x, y, a) => x * (1 - a) + y * a;
+
+
+
+// function cursor(){
+//      var cursor = document.querySelector("#circle");
+//      var cursorPos = { x: 0, y: 0 };
+     
+//      document.addEventListener("mousemove", (e) => {
+//        cursorPos.x = e.clientX;
+//        cursorPos.y = e.clientY;
+     
+//        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+//      });
+//     }
+
+// cursor();
 
 
 
@@ -126,12 +141,16 @@ frame.addEventListener("mousemove",function(dets){
      
 
      gsap.to(circle,{
-          scale: 7,
+          scale: 10,
      })
 
-     gsap.to(span,{
-          mixBlendMode:"difference",
-          color: "#fff",
+     gsap.to(".frame>span",{
+          mixBlendMode: "difference",
+          color: "#000",
+          duration: 0.3,
+     })
+     gsap.to(".frame",{
+          borderColor: "#000",
           duration: 0.3,
      })
 })
@@ -141,13 +160,16 @@ frame.addEventListener("mouseleave",function(dets){
           scale: 1,
      })
 
-     gsap.to(span,{
-          mixBlendMode:"difference",
+     gsap.to(".frame>span",{
+          mixBlendMode: "none",
           color:"#fff",
           duration: 0.3,
      })
+     gsap.to(".frame",{
+          borderColor:"#fff",
+          duration: 0.3,
+     })
 
-     span.style.color = "#fff";
 })
 
 
