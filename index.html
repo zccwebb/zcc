@@ -9,15 +9,25 @@
   <link rel="stylesheet" href="./styles/index.css">
   <link rel="stylesheet" href="./styles/cursor&magnbtn.css">
   <link rel="stylesheet" href="./styles/textscroll.css">
+  <link rel="stylesheet" href="./styles/progressScrollbar.css">
 
-
+ 
 </head>
 <body>
-    <div class="container1"></div>
+  
+  <div class="scrollbar">
+    <div class="scrollball">
+      <span></span>
+    </div>
+  </div>
+  
+  <div id="circle"></div>
+  
+  <div class="container1"></div>
 
     <div class="navbar1"></div>
 
-    <div id="circle"></div>
+
 
     <div class="hero">
       <div class="h1">
@@ -50,22 +60,22 @@
       <section class="marquee">
         <div class="marquee__inner">
              <div class="marquee__part">
-              &nbsp;Zenith Code Creations, A Web-Dev Company&nbsp;
+              &nbsp;Zenith Code Creations, A Web-Dev Company&nbsp; |
              </div>
              <div class="marquee__part">
-               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; 
+               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; | 
              </div>
              <div class="marquee__part">
-                &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp;  
+                &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; |  
              </div>
              <div class="marquee__part">
-               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; 
+               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; | 
              </div>
              <div class="marquee__part">
-               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp;  
+               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; |  
              </div>
              <div class="marquee__part">
-               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; 
+               &nbsp;Zenith Code Creations , A Web-Dev Company&nbsp; | 
              </div>
            </div>
    </section>
@@ -165,138 +175,20 @@
  <div class="space"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js" integrity="sha384-fcLDUAwcSMMfmpKMJ0dO2//SL2WJ5/kkyz/yvgtmLXBEp3GdqrQF9ahRerhdLXn+" crossorigin="anonymous"></script>
 
 
 
+
+
+    <script src="./script/progressScroll.js"></script>
     <script src="./gsap/script.js"></script>
     <script type="module" src="./script/loader.js"></script>
     <script type="module" src="./script/navbar.js"></script>
     <script src="./gsap/cursor&magnbtn.js"></script>
+    <script src="./script/velocity.js"></script>
+    <script src="./script/textinfinitesc.js"></script>
 
-
-    <script>
-      const velocity = window.Velocity || $.Velocity,
-     accordions = document.querySelectorAll('.accordion'),
-     animationDuration = 500,
- 
-     closeAccordion = (clickedAccordion) => {
-         clickedAccordion.classList.remove('accordion--open');
-         velocity(clickedAccordion.querySelector('svg'), {rotateZ: 0}, {duration: animationDuration, easing: 'easeInQuad'});
-         velocity(clickedAccordion.querySelector('.accordion__content'), 'slideUp', {duration: animationDuration, easing: 'easeInQuad'});
-     },
- 
-     openAccordion = (clickedAccordion) => {
-         clickedAccordion.classList.add('accordion--open');
-         velocity(clickedAccordion.querySelector('svg'), {rotateZ: '135deg'}, {duration: animationDuration, easing: 'easeOutQuad'});
-         velocity(clickedAccordion.querySelector('.accordion__content'), 'slideDown', {duration: animationDuration, easing: 'easeOutQuad'});
-     },
- 
-     isCollapsible = (accordion) => {
-         return accordion.getAttribute('collapsible') === 'true';
-     },
- 
-     checkCollapse = () => {
-         let clickedAccordion = event.currentTarget,
-             groupedAccordions = [].slice.call(clickedAccordion.closest('.accordion__container').querySelectorAll('.accordion'));
- 
-         groupedAccordions.every(isCollapsible) ? updateCollapseStatus(clickedAccordion) : updateOpenStatus(clickedAccordion);
-     },
- 
-     updateCollapseStatus = clickedAccordion => {
-         clickedAccordion.classList.contains('accordion--open') ? closeAccordion(clickedAccordion) : openAccordion(clickedAccordion);
-     },
-  
-     updateOpenStatus = clickedAccordion => {
-         if (!clickedAccordion.classList.contains('accordion--open')) {
-             [].forEach.call(clickedAccordion.closest('.accordion__container').querySelectorAll('.accordion'), accordion => {
-                 closeAccordion(accordion);
-             });
- 
-             openAccordion(clickedAccordion);
-         };
-     },
-     init = () => {
-         [].forEach.call(accordions, accordion => {
-             accordion.addEventListener('click', checkCollapse);
-         });
- 
-         // Open first accordion for non collapsible accordions on page load
-         [].forEach.call(document.querySelectorAll('.accordion__container'), accordionContainers => {
-             let allAccords = [].slice.call(accordionContainers.querySelectorAll('.accordion')),
-                 firstAccord = allAccords[0];
- 
-             if (!allAccords.every(isCollapsible)) {
-                 firstAccord.classList.add('accordion--open');
-                 velocity(firstAccord.querySelector('svg'), {rotateZ: '135deg'}, {duration: 0});
-                 velocity(firstAccord.querySelector('.accordion__content'), 'slideDown', {duration: 0});
-             }
-         });
-     };
- 
- document.addEventListener('DOMContentLoaded', init);
- 
- </script>
-
-    <script>
-      let currentScroll = 0;
-      let isScrollingDown = true;
-      let arrows = document.querySelectorAll(".arrow");
-      let tween = gsap
-        .to(".marquee__part", {
-          xPercent: -100,
-          repeat: -1,
-          duration: 25,
-          ease: "linear",
-        })
-        .totalProgress(0.5);
-      gsap.set(".marquee__inner", { xPercent: -50 });
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset > currentScroll) {
-          isScrollingDown = true;
-        } else {
-          isScrollingDown = false;
-        }
-        gsap.to(tween, {
-          timeScale: isScrollingDown ? 1 : -1,
-        });
-        arrows.forEach((arrow) => {
-          if (isScrollingDown) {
-            arrow.classList.remove("active");
-          } else {
-            arrow.classList.add("active");
-          }
-        });
-        currentScroll = window.pageYOffset;
-      });
- </script>
-<!-- 
- <script>
-  let elements = document.querySelectorAll(".text");
-
-  elements.forEach((element) => {
-    let innerText = element.innerText;
-    element.innerHTML = "";
-
-    let textContainer = document.createElement("div");
-    textContainer.classList.add("block");
-
-    for (let letter of innerText) {
-      let span = document.createElement("span");
-      span.innerText = letter.trim() === "" ? "\xa0" : letter;
-      span.classList.add("letter");
-      textContainer.appendChild(span);
-    }
-
-    element.appendChild(textContainer);
-    element.appendChild(textContainer.cloneNode(true));
-  });
-
-  elements.forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      element.classList.remove("play");
-    });
-  });
-</script> -->
   </body>
 </html>
