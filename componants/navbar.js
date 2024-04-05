@@ -15,9 +15,7 @@ const navbar = ()=>{
               <div class="nav-logo"><img src="./images/zcclogo.png
               " alt="zccLogo"></div>
               <div class="nav-socials">
-                <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
                 <a href="https://wa.me/918003316534?text=Hello Sir !!,">WhatsApp</a>
               </div>
             </div>

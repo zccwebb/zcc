@@ -4,7 +4,7 @@ body {
 }
 .scrollbar {
     position: fixed;
-    left: 10px;
+    right: 20px;
     top: calc(50% - 10vh);
     height: 20vh;
     width: 2px;

@@ -74,6 +74,7 @@
      font-size: 30px;
      color: white;
      cursor: pointer;
+     mix-blend-mode: difference;
    }
 
    .nav-logo{
@@ -90,7 +91,7 @@
    }
 
    .menu-toggle{
-    cursor: pointer;
+    cursor: pointer !important;
    }
    
    #menu-toggle-btn {
@@ -103,7 +104,7 @@
      position: relative;
      transition: all 0.3s;
      z-index: 10000;
-     cursor: pointer;
+     cursor: pointer !important;
    }
    
    #span {
@@ -164,9 +165,10 @@
    }
    
    .nav {
-     width: 70%;
+     width: 50%;
      display: flex;
      align-items: center;
+     /* background-color: red; */
    }
    
    .flex {
@@ -214,7 +216,7 @@
    }
    
    .nav-link a {
-     padding-left: 250px !important;
+     /* padding-left: 250px !important; */
      font-family: moon;
      position: relative;
      top: 60px;

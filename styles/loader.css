@@ -8,6 +8,11 @@
   font-family: gunsan;
   src: url(../fonts/gunsan.woff2);
 }
+
+::selection{
+  background-color: #ffffff;
+  color: #ffffff;
+}
    
 html,
 body{
@@ -16,8 +21,7 @@ body{
   overflow-x: hidden;
   color: white;
 }
-
-   
+  
 .loader{
   position: fixed;
   width: 100vw;
@@ -87,17 +91,14 @@ body{
   font-size: 4vw;
   font-family: gunsan;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  color: whit;
+  z-index: 4;
 }
 
 .hero h1 {
   position: relative;
   font-weight: 400;
   line-height: 85%;
-}
-
-.hero h1 span {
-  font-family: "Sharp Grotesk";
-  font-weight: 700;
 }
 
 .bannerfooter {
@@ -116,14 +117,10 @@ body{
 .itemindex {
   width: 100px;
   height: 100px;
+  z-index: 4 !important;
 }
 
 .itemindex img{
-  position: absolute;
-}
-
-.space{
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  z-index: 4 !important;
 }

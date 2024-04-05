@@ -7,23 +7,9 @@ var text3 = document.querySelector(".hov3");
 var text4 = document.querySelector(".hov4");
 
 
+
 const lerp = (x, y, a) => x * (1 - a) + y * a;
 
-
-
-// function cursor(){
-//      var cursor = document.querySelector("#circle");
-//      var cursorPos = { x: 0, y: 0 };
-     
-//      document.addEventListener("mousemove", (e) => {
-//        cursorPos.x = e.clientX;
-//        cursorPos.y = e.clientY;
-     
-//        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-//      });
-//     }
-
-// cursor();
 
 
 
