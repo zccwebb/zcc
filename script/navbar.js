@@ -3,7 +3,10 @@ const navbarcon = document.querySelector(".navbar1");
 navbarcon.innerHTML = navbar();
 
 
-
+let zcclogo = document.querySelector(".site-logo");
+zcclogo.addEventListener("click",function(){
+  window.location.href = "./index.html";
+})
 
 
 

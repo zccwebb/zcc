@@ -26,7 +26,6 @@
      align-items: center;
      width: 100%;
      margin-top: 100px;
-     /* padding: 5rem; */
  }
  
  #upper{
@@ -234,7 +233,7 @@
     }
 
     .myimg{
-        width: 100%;
+        width: 80%;
         object-fit: cover;
     }
 
@@ -291,9 +290,4 @@
    }
    .accordion--open .accordion__content {
         display: block;
-   }
-
-
-
-
-
+}

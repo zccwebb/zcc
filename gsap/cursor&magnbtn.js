@@ -5,6 +5,10 @@ var text1 = document.querySelector(".hov1");
 var text2 = document.querySelector(".hov2");
 var text3 = document.querySelector(".hov3");
 var text4 = document.querySelector(".hov4");
+var footerig = document.querySelector(".flIg");
+var footerwp = document.querySelector(".flwp");
+var footercall = document.querySelector(".frcall");
+
 
 
 
@@ -305,6 +309,105 @@ text4.addEventListener("mouseleave",function(dets){
 })
 
 
+
+footerig.addEventListener("mousemove",function(dets){
+
+     
+     
+     gsap.to(circle,{
+          scale: 4,
+     })
+
+     
+     gsap.to(".text",{
+          mixBlendMode:"difference",
+          color: "#fff",
+          duration: 0.3,
+     })
+
+
+})
+
+footerig.addEventListener("mouseleave",function(dets){
+     gsap.to(circle,{
+          scale: 1,
+     })
+
+     gsap.to(".text",{
+          mixBlendMode: "none",
+          color:"#fff",
+          duration: 0.3,
+     })
+
+     footerig.style.color = "#fff";
+
+})
+
+footerwp.addEventListener("mousemove",function(dets){
+
+     
+     
+     gsap.to(circle,{
+          scale: 4,
+     })
+
+     
+     gsap.to(".text",{
+          mixBlendMode:"difference",
+          color: "#fff",
+          duration: 0.3,
+     })
+
+
+})
+
+footerwp.addEventListener("mouseleave",function(dets){
+     gsap.to(circle,{
+          scale: 1,
+     })
+
+     gsap.to(".text",{
+          mixBlendMode: "none",
+          color:"#fff",
+          duration: 0.3,
+     })
+
+     footerwp.style.color = "#fff";
+
+})
+
+footercall.addEventListener("mousemove",function(dets){
+
+     
+     
+     gsap.to(circle,{
+          scale: 4,
+     })
+
+     
+     gsap.to(".text",{
+          mixBlendMode:"difference",
+          // color: "#fff",
+          duration: 0.3,
+     })
+
+
+})
+
+footercall.addEventListener("mouseleave",function(dets){
+     gsap.to(circle,{
+          scale: 1,
+     })
+
+     gsap.to(".text",{
+          mixBlendMode: "none",
+          // color:"#fff",
+          duration: 0.3,
+     })
+
+     // footercall.style.color = "#fff";
+
+})
 
 
 //  For Project.html page

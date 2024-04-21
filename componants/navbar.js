@@ -15,7 +15,7 @@ const navbar = ()=>{
               <div class="nav-logo"><img src="./images/zcclogo.png
               " alt="zccLogo"></div>
               <div class="nav-socials">
-                <a href="#">Instagram</a>
+                <a href="https://www.instagram.com/zcc_webb">Instagram</a>
                 <a href="https://wa.me/918003316534?text=Hello Sir !!,">WhatsApp</a>
               </div>
             </div>
@@ -47,7 +47,7 @@ const navbar = ()=>{
               <a href="#"></a>
             </div>
             <div class="contact">
-              <a href="#">zenithcodecreations@gmail.com</a>
+              <a href="mailto:zenithcodecreations@gmail.com">zenithcodecreations@gmail.com</a>
             </div>
           </div>
         </div>

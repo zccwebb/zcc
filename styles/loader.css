@@ -117,10 +117,10 @@ body{
 .itemindex {
   width: 100px;
   height: 100px;
-  z-index: 4 !important;
+  /* z-index: 4 !important; */
 }
 
-.itemindex img{
+.itemindex>img{
   position: relative;
-  z-index: 4 !important;
+  z-index: 4;
 }
